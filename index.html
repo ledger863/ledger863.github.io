@@ -1,0 +1,1766 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小野猫kiki吃瓜 - 吃瓜观察,原创视频内容平台</title>
+<meta name="description" content="小野猫kiki吃瓜是专注娱乐热点与网络话题观察的原创视频品牌官网，以吃瓜视角记录大众文化，汇聚创作者共建有温度的吃瓜内容社区。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f6a623'/%3E%3Ccircle cx='24' cy='26' r='5' fill='%23222'/%3E%3Ccircle cx='42' cy='26' r='5' fill='%23222'/%3E%3Cpath d='M20 42 Q32 52 44 42' stroke='%23222' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M14 12 L22 20 M50 12 L42 20' stroke='%23222' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --xk-amber:#f6a623;
+  --xk-amber-deep:#e07b1f;
+  --xk-cream:#fff9f0;
+  --xk-ink:#2b2118;
+  --xk-sub:#7a6a58;
+  --xk-line:#f0e2ce;
+  --xk-card:#ffffff;
+  --xk-green:#3f9e6e;
+  --xk-rose:#e0627a;
+  --xk-shadow:0 10px 30px rgba(180,130,60,.13);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--xk-cream);
+  color:var(--xk-ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.xk-sticky{position:sticky;top:0;z-index:60}
+
+/* 公告条 */
+.xk-notice{
+  background:var(--xk-ink);
+  color:#ffe9c6;
+  font-size:13px;
+  padding:8px 16px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.xk-notice-tag{
+  background:var(--xk-amber);
+  color:var(--xk-ink);
+  font-weight:700;
+  font-size:11px;
+  padding:2px 8px;
+  border-radius:20px;
+  flex:none;
+}
+.xk-notice-track{
+  display:flex;
+  gap:48px;
+  animation:xk-marquee 26s linear infinite;
+}
+.xk-notice-track span{flex:none}
+@keyframes xk-marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* 页头 */
+.xk-header{
+  background:rgba(255,249,240,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--xk-line);
+}
+.xk-header-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.xk-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:20px;
+  letter-spacing:.5px;
+  flex:none;
+}
+.xk-logo-mark{
+  width:38px;height:38px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--xk-amber),var(--xk-amber-deep));
+  display:grid;place-items:center;
+  color:#2b2118;font-size:20px;font-weight:900;
+  box-shadow:0 4px 12px rgba(224,123,31,.35);
+}
+.xk-logo small{
+  display:block;
+  font-size:10px;
+  font-weight:500;
+  color:var(--xk-sub);
+  letter-spacing:2px;
+}
+.xk-nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
+.xk-nav a{
+  font-size:14px;
+  padding:6px 12px;
+  border-radius:20px;
+  color:var(--xk-sub);
+  transition:.2s;
+}
+.xk-nav a:hover{background:#ffedd2;color:var(--xk-amber-deep)}
+.xk-header-tools{display:flex;align-items:center;gap:10px}
+.xk-search{position:relative;flex:none}
+.xk-search input{
+  width:180px;
+  padding:8px 36px 8px 14px;
+  border-radius:22px;
+  border:1px solid var(--xk-line);
+  background:#fff;
+  font-size:13px;
+  outline:none;
+  transition:.25s;
+}
+.xk-search input:focus{width:220px;border-color:var(--xk-amber)}
+.xk-search-btn{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  width:28px;height:28px;border-radius:50%;
+  background:var(--xk-amber);color:#2b2118;
+  display:grid;place-items:center;font-size:13px;
+}
+.xk-search-tip{
+  position:absolute;top:42px;left:0;right:0;
+  background:#fff;border:1px solid var(--xk-line);
+  border-radius:12px;padding:10px 14px;
+  font-size:12.5px;color:var(--xk-sub);
+  box-shadow:var(--xk-shadow);
+  display:none;
+  z-index:80;
+}
+.xk-search-tip.show{display:block}
+.xk-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:9px 20px;border-radius:24px;
+  font-size:14px;font-weight:600;
+  transition:.22s;
+  border:1px solid transparent;
+}
+.xk-btn-primary{
+  background:linear-gradient(135deg,var(--xk-amber),var(--xk-amber-deep));
+  color:#2b2118;
+  box-shadow:0 6px 16px rgba(224,123,31,.32);
+}
+.xk-btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(224,123,31,.4)}
+.xk-btn-ghost{
+  border-color:var(--xk-line);background:#fff;color:var(--xk-ink);
+}
+.xk-btn-ghost:hover{border-color:var(--xk-amber);color:var(--xk-amber-deep)}
+.xk-burger{
+  display:none;width:40px;height:40px;border-radius:10px;
+  border:1px solid var(--xk-line);background:#fff;
+  font-size:18px;align-items:center;justify-content:center;
+}
+
+/* 通用容器 */
+.xk-wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.xk-section{padding:64px 0;scroll-margin-top:104px}
+.xk-section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:20px;margin-bottom:32px;flex-wrap:wrap;
+}
+.xk-section-head h2{
+  font-size:30px;letter-spacing:.5px;line-height:1.25;
+}
+.xk-section-head h2 em{
+  font-style:normal;color:var(--xk-amber-deep);
+}
+.xk-section-head p{color:var(--xk-sub);font-size:14px;max-width:520px}
+.xk-eyebrow{
+  display:inline-block;font-size:12px;font-weight:700;
+  letter-spacing:3px;color:var(--xk-amber-deep);
+  text-transform:uppercase;margin-bottom:10px;
+}
+
+/* 首屏 */
+.xk-hero{
+  background:
+    radial-gradient(900px 380px at 88% 0%,rgba(246,166,35,.24),transparent 60%),
+    radial-gradient(700px 320px at 0% 100%,rgba(63,158,110,.12),transparent 65%),
+    var(--xk-cream);
+  overflow:hidden;
+}
+.xk-hero-grid{
+  max-width:1180px;margin:0 auto;padding:64px 20px 56px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+}
+.xk-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--xk-line);
+  border-radius:30px;padding:6px 14px 6px 6px;
+  font-size:12.5px;color:var(--xk-sub);margin-bottom:20px;
+  box-shadow:0 4px 14px rgba(200,150,80,.1);
+}
+.xk-hero-badge b{
+  background:var(--xk-ink);color:#ffe9c6;font-size:11px;
+  padding:3px 10px;border-radius:20px;font-weight:600;
+}
+.xk-hero h1{
+  font-size:clamp(38px,5.2vw,60px);
+  line-height:1.08;letter-spacing:-.5px;font-weight:900;
+  margin-bottom:18px;
+}
+.xk-hero h1 span{color:var(--xk-amber-deep)}
+.xk-hero-lead{
+  font-size:16px;color:#4f4437;max-width:540px;margin-bottom:26px;
+}
+.xk-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.xk-hero-stats{
+  display:flex;gap:34px;flex-wrap:wrap;
+}
+.xk-stat b{font-size:26px;font-weight:800;display:block;line-height:1.1}
+.xk-stat span{font-size:12.5px;color:var(--xk-sub)}
+.xk-hero-visual{position:relative}
+.xk-hero-frame{
+  border-radius:26px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(160,110,40,.24);
+  border:6px solid #fff;
+  background:#fff;
+}
+.xk-hero-frame svg{display:block;width:100%;height:auto}
+.xk-hero-float{
+  position:absolute;background:#fff;border-radius:16px;
+  padding:12px 16px;box-shadow:var(--xk-shadow);
+  font-size:12.5px;font-weight:600;
+  display:flex;align-items:center;gap:10px;
+}
+.xk-hero-float.f1{left:-16px;bottom:34px;color:var(--xk-green)}
+.xk-hero-float.f2{right:-10px;top:22px;color:var(--xk-rose)}
+.xk-dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+
+/* 关键词解析长文 */
+.xk-about{background:#fff}
+.xk-about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.xk-about-card{
+  background:linear-gradient(160deg,#fff6e8,#fff);
+  border:1px solid var(--xk-line);
+  border-radius:22px;padding:30px;
+  position:sticky;top:120px;
+}
+.xk-about-card h3{font-size:20px;margin-bottom:12px}
+.xk-about-card ul{list-style:none;display:grid;gap:10px;margin-top:16px}
+.xk-about-card li{
+  font-size:13.5px;color:#5b4d3d;padding-left:20px;position:relative;
+}
+.xk-about-card li::before{
+  content:"◆";position:absolute;left:0;color:var(--xk-amber);font-size:10px;top:4px;
+}
+.xk-prose p{font-size:15px;color:#463c31;margin-bottom:16px;text-align:justify}
+.xk-prose h3{font-size:19px;margin:26px 0 12px;color:var(--xk-ink)}
+.xk-prose strong{color:var(--xk-amber-deep)}
+
+/* 焦点视频 */
+.xk-focus{background:linear-gradient(180deg,var(--xk-cream),#ffeee2)}
+.xk-focus-grid{
+  display:grid;grid-template-columns:1.45fr 1fr;gap:24px;
+}
+.xk-vcard{
+  background:var(--xk-card);border-radius:20px;overflow:hidden;
+  border:1px solid var(--xk-line);
+  transition:transform .25s,box-shadow .25s;
+  display:flex;flex-direction:column;
+}
+.xk-vcard:hover{transform:translateY(-5px);box-shadow:var(--xk-shadow)}
+.xk-vthumb{position:relative;aspect-ratio:16/9;overflow:hidden}
+.xk-vthumb svg{width:100%;height:100%;display:block}
+.xk-vthumb .xk-vtag{
+  position:absolute;left:12px;top:12px;
+  background:rgba(43,33,24,.78);color:#ffe9c6;
+  font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;
+}
+.xk-vthumb .xk-vplay{
+  position:absolute;right:12px;bottom:12px;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.92);
+  display:grid;place-items:center;
+  color:var(--xk-amber-deep);font-size:14px;
+  box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+.xk-vbody{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.xk-vbody h3{font-size:16.5px;line-height:1.45}
+.xk-vbody p{font-size:13px;color:var(--xk-sub);flex:1}
+.xk-vmeta{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:var(--xk-sub);margin-top:4px;gap:8px;flex-wrap:wrap;
+}
+.xk-vchips{display:flex;gap:6px;flex-wrap:wrap}
+.xk-chip{
+  font-size:11px;background:#fff2dd;color:var(--xk-amber-deep);
+  padding:2px 9px;border-radius:14px;font-weight:600;
+}
+.xk-vactions{display:flex;gap:8px;align-items:center;margin-top:10px;border-top:1px dashed var(--xk-line);padding-top:12px}
+.xk-act{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12.5px;color:var(--xk-sub);
+  padding:4px 10px;border-radius:16px;transition:.2s;
+}
+.xk-act:hover{background:#fff3e0;color:var(--xk-amber-deep)}
+.xk-act.liked{color:var(--xk-rose);font-weight:700}
+.xk-act.saved{color:var(--xk-amber-deep);font-weight:700}
+.xk-focus-side{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+.xk-focus-side .xk-vthumb{aspect-ratio:16/10}
+.xk-focus-side .xk-vbody h3{font-size:14.5px}
+.xk-focus-side .xk-vbody p{display:none}
+
+/* 视频流 */
+.xk-flow{background:#fff}
+.xk-flow-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.xk-flow-grid .xk-vthumb{aspect-ratio:16/9}
+
+/* 专题 */
+.xk-topics{background:linear-gradient(180deg,#fff3e3,#fff9f0)}
+.xk-topic-list{display:grid;gap:18px}
+.xk-topic{
+  display:grid;grid-template-columns:200px 1fr auto;
+  gap:22px;align-items:center;
+  background:#fff;border:1px solid var(--xk-line);
+  border-radius:20px;padding:18px;
+  transition:.25s;
+}
+.xk-topic:hover{border-color:#f5c98a;box-shadow:var(--xk-shadow)}
+.xk-topic-cover{border-radius:14px;overflow:hidden;aspect-ratio:16/10}
+.xk-topic-cover svg{width:100%;height:100%;display:block}
+.xk-topic h3{font-size:17.5px;margin-bottom:6px}
+.xk-topic p{font-size:13px;color:var(--xk-sub)}
+.xk-topic-status{
+  font-size:12px;font-weight:700;padding:6px 14px;border-radius:20px;
+  background:#eaf6ee;color:var(--xk-green);white-space:nowrap;
+}
+.xk-topic-status.hot{background:#ffe9ef;color:var(--xk-rose)}
+
+/* 创作者 */
+.xk-creators{background:#fff}
+.xk-creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.xk-creator{
+  background:var(--xk-cream);border:1px solid var(--xk-line);
+  border-radius:20px;padding:22px;text-align:center;
+  transition:.25s;cursor:pointer;
+}
+.xk-creator:hover{transform:translateY(-4px);box-shadow:var(--xk-shadow);background:#fffdf8}
+.xk-avatar{
+  width:70px;height:70px;border-radius:50%;
+  margin:0 auto 14px;display:grid;place-items:center;
+  font-size:26px;font-weight:900;color:#fff;
+  box-shadow:0 8px 18px rgba(150,100,40,.22);
+}
+.xk-creator h3{font-size:16px;margin-bottom:4px}
+.xk-creator .xk-field{font-size:12px;color:var(--xk-amber-deep);font-weight:600;margin-bottom:10px}
+.xk-creator p{font-size:12.5px;color:var(--xk-sub);margin-bottom:12px;min-height:38px}
+.xk-creator .xk-cdata{display:flex;justify-content:center;gap:16px;font-size:11.5px;color:var(--xk-sub);border-top:1px dashed var(--xk-line);padding-top:10px}
+.xk-cdata b{display:block;color:var(--xk-ink);font-size:14px}
+
+/* 故事 */
+.xk-stories{background:linear-gradient(160deg,#fff7ec,#fff)}
+.xk-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.xk-story{
+  background:#fff;border-radius:20px;padding:24px;
+  border:1px solid var(--xk-line);position:relative;
+}
+.xk-story::before{
+  content:"“";position:absolute;top:6px;right:18px;
+  font-size:54px;color:#f7dcb6;font-family:Georgia,serif;line-height:1;
+}
+.xk-story h3{font-size:16px;margin-bottom:10px}
+.xk-story p{font-size:13.5px;color:#57493a;margin-bottom:14px}
+.xk-story .xk-smeta{font-size:12px;color:var(--xk-sub);display:flex;gap:10px;align-items:center}
+.xk-savatar{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;color:#fff}
+
+/* 作品墙 */
+.xk-wall{background:#2b2118;color:#ffe9c6}
+.xk-wall .xk-section-head h2{color:#fff}
+.xk-wall .xk-section-head p{color:#c9b79c}
+.xk-wall-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  grid-auto-rows:110px;gap:12px;
+}
+.xk-wall-item{
+  border-radius:16px;overflow:hidden;position:relative;
+  border:1px solid rgba(255,233,198,.14);
+  cursor:pointer;transition:.25s;
+}
+.xk-wall-item:hover{transform:scale(1.03);border-color:var(--xk-amber)}
+.xk-wall-item svg{width:100%;height:100%;display:block}
+.xk-wall-item span{
+  position:absolute;left:10px;bottom:8px;
+  font-size:11.5px;color:#fff;
+  text-shadow:0 1px 4px rgba(0,0,0,.6);font-weight:600;
+}
+.w-l2{grid-column:span 2;grid-row:span 2}
+.w-l1{grid-column:span 1;grid-row:span 1}
+.w-l2r{grid-column:span 2;grid-row:span 1}
+.w-l3{grid-column:span 3;grid-row:span 1}
+
+/* 评价 */
+.xk-reviews{background:#fff}
+.xk-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.xk-review{
+  background:var(--xk-cream);border-radius:18px;padding:20px;
+  border:1px solid var(--xk-line);
+  display:flex;flex-direction:column;gap:10px;
+}
+.xk-review p{font-size:13.5px;color:#4f4437;flex:1}
+.xk-review .xk-ruser{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--xk-sub)}
+.xk-ruser b{color:var(--xk-ink)}
+.xk-stars{color:var(--xk-amber);letter-spacing:2px;font-size:12px}
+
+/* 动态 */
+.xk-news{background:linear-gradient(180deg,#fff9f0,#fff3e3)}
+.xk-news-list{display:grid;gap:0;border-left:2px solid #f3d9b2;margin-left:8px}
+.xk-news-item{
+  position:relative;padding:0 0 26px 26px;
+}
+.xk-news-item::before{
+  content:"";position:absolute;left:-7px;top:6px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--xk-amber);border:3px solid #fff;box-shadow:0 0 0 2px #f3d9b2;
+}
+.xk-news-item time{font-size:12px;color:var(--xk-amber-deep);font-weight:700}
+.xk-news-item h3{font-size:16px;margin:4px 0 6px}
+.xk-news-item p{font-size:13.5px;color:var(--xk-sub)}
+
+/* 合作与FAQ */
+.xk-partners{background:#fff}
+.xk-partner-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:48px}
+.xk-partner{
+  border:1px solid var(--xk-line);border-radius:16px;
+  padding:20px 10px;text-align:center;font-weight:700;
+  font-size:14px;color:#6b5a46;background:var(--xk-cream);
+  transition:.2s;
+}
+.xk-partner:hover{border-color:var(--xk-amber);color:var(--xk-amber-deep)}
+.xk-faq{max-width:820px;margin:0 auto}
+.xk-faq details{
+  border:1px solid var(--xk-line);border-radius:14px;
+  padding:0 18px;margin-bottom:12px;background:var(--xk-cream);
+  transition:.2s;
+}
+.xk-faq details[open]{background:#fff;border-color:#f3c78b;box-shadow:var(--xk-shadow)}
+.xk-faq summary{
+  cursor:pointer;padding:16px 0;font-weight:600;font-size:14.5px;
+  list-style:none;display:flex;justify-content:space-between;gap:12px;
+}
+.xk-faq summary::-webkit-details-marker{display:none}
+.xk-faq summary::after{content:"+";font-size:18px;color:var(--xk-amber-deep);font-weight:700}
+.xk-faq details[open] summary::after{content:"−"}
+.xk-faq p{font-size:13.5px;color:var(--xk-sub);padding:0 0 16px}
+
+/* 联系 / 投稿 */
+.xk-join{background:linear-gradient(135deg,#2b2118,#463523);color:#ffe9c6}
+.xk-join-inner{
+  max-width:1180px;margin:0 auto;padding:56px 20px;
+  display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;
+}
+.xk-join h2{font-size:30px;color:#fff;margin-bottom:12px}
+.xk-join p{color:#cfbb9f;font-size:14.5px;margin-bottom:22px}
+.xk-join-actions{display:flex;gap:12px;flex-wrap:wrap}
+.xk-join .xk-btn-ghost{background:transparent;border-color:rgba(255,233,198,.35);color:#ffe9c6}
+.xk-join .xk-btn-ghost:hover{border-color:var(--xk-amber);color:var(--xk-amber)}
+.xk-join-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,233,198,.18);
+  border-radius:20px;padding:24px;
+}
+.xk-join-card h3{font-size:16px;color:#fff;margin-bottom:12px}
+.xk-join-card ul{list-style:none;display:grid;gap:10px;font-size:13.5px;color:#d9c8af}
+.xk-join-card li{display:flex;justify-content:space-between;gap:10px}
+.xk-join-card li b{color:var(--xk-amber)}
+
+/* 页脚 */
+.xk-footer{background:#1f1810;color:#a99a86;padding:48px 0 26px;font-size:13px}
+.xk-footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;
+  padding-bottom:30px;border-bottom:1px solid rgba(255,233,198,.12);
+}
+.xk-footer h4{color:#ffe9c6;font-size:14px;margin-bottom:12px}
+.xk-footer ul{list-style:none;display:grid;gap:8px}
+.xk-footer a:hover{color:var(--xk-amber)}
+.xk-footer-bottom{
+  display:flex;justify-content:space-between;gap:16px;
+  flex-wrap:wrap;padding-top:22px;font-size:12px;color:#7d7060;
+}
+
+/* 回到顶部 & toast */
+.xk-top-btn{
+  position:fixed;right:22px;bottom:26px;z-index:90;
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--xk-amber),var(--xk-amber-deep));
+  color:#2b2118;font-size:18px;font-weight:900;
+  box-shadow:0 10px 24px rgba(224,123,31,.4);
+  display:grid;place-items:center;
+  opacity:0;pointer-events:none;transition:.3s;
+}
+.xk-top-btn.show{opacity:1;pointer-events:auto}
+.xk-toast{
+  position:fixed;left:50%;bottom:40px;transform:translate(-50%,20px);
+  background:#2b2118;color:#ffe9c6;padding:11px 22px;border-radius:30px;
+  font-size:13.5px;opacity:0;pointer-events:none;transition:.3s;z-index:120;
+  box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+.xk-toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* 弹窗 */
+.xk-modal-mask{
+  position:fixed;inset:0;background:rgba(30,22,14,.55);
+  display:none;place-items:center;z-index:110;padding:20px;
+}
+.xk-modal-mask.show{display:grid}
+.xk-modal{
+  background:#fff;border-radius:22px;max-width:460px;width:100%;
+  padding:28px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.3);
+}
+.xk-modal h3{font-size:19px;margin-bottom:12px}
+.xk-modal p{font-size:13.5px;color:var(--xk-sub);margin-bottom:16px}
+.xk-modal textarea,.xk-modal input{
+  width:100%;border:1px solid var(--xk-line);border-radius:12px;
+  padding:10px 14px;font-size:13.5px;font-family:inherit;outline:none;
+  margin-bottom:12px;background:var(--xk-cream);
+}
+.xk-modal textarea{min-height:90px;resize:vertical}
+.xk-modal textarea:focus,.xk-modal input:focus{border-color:var(--xk-amber)}
+.xk-modal-close{
+  position:absolute;right:16px;top:14px;width:30px;height:30px;
+  border-radius:50%;background:var(--xk-cream);display:grid;place-items:center;
+  font-size:15px;color:var(--xk-sub);
+}
+
+/* 响应式 */
+@media (max-width:1024px){
+  .xk-hero-grid{grid-template-columns:1fr;gap:32px;padding-top:44px}
+  .xk-about-grid{grid-template-columns:1fr}
+  .xk-about-card{position:static}
+  .xk-focus-grid{grid-template-columns:1fr}
+  .xk-flow-grid{grid-template-columns:repeat(2,1fr)}
+  .xk-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .xk-story-grid{grid-template-columns:1fr}
+  .xk-review-grid{grid-template-columns:1fr 1fr}
+  .xk-partner-row{grid-template-columns:repeat(3,1fr)}
+  .xk-join-inner{grid-template-columns:1fr}
+  .xk-footer-grid{grid-template-columns:1fr 1fr}
+  .xk-wall-grid{grid-template-columns:repeat(4,1fr)}
+  .w-l3{grid-column:span 2}
+}
+@media (max-width:760px){
+  .xk-nav{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--xk-line);
+    padding:12px 16px;flex-direction:column;gap:4px;
+    box-shadow:0 18px 30px rgba(150,110,50,.14);
+  }
+  .xk-nav.open{display:flex}
+  .xk-nav a{padding:10px 14px}
+  .xk-header-inner{position:relative;flex-wrap:wrap}
+  .xk-burger{display:flex}
+  .xk-search{order:3;width:100%}
+  .xk-search input{width:100%}
+  .xk-search input:focus{width:100%}
+  .xk-flow-grid{grid-template-columns:1fr}
+  .xk-review-grid{grid-template-columns:1fr}
+  .xk-focus-side{grid-template-columns:1fr 1fr}
+  .xk-topic{grid-template-columns:110px 1fr;gap:14px}
+  .xk-topic-status{grid-column:2}
+  .xk-wall-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}
+  .w-l2,.w-l3{grid-column:span 2}
+  .xk-partner-row{grid-template-columns:repeat(2,1fr)}
+  .xk-footer-grid{grid-template-columns:1fr}
+  .xk-section{padding:48px 0}
+  .xk-hero-float{display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶：公告条 + 页头 -->
+<div class="xk-sticky">
+  <div class="xk-notice">
+    <span class="xk-notice-tag">最新</span>
+    <div class="xk-notice-track">
+      <span>「吃瓜观察室」第 118 期上线：2026 年度网络热梗复盘</span>
+      <span>官方发布：小野猫kiki吃瓜创作者激励计划第二季开启报名</span>
+      <span>专题企划《围观之后》新增 3 支原创短片，持续更新中</span>
+      <span>「吃瓜观察室」第 118 期上线：2026 年度网络热梗复盘</span>
+      <span>官方发布：小野猫kiki吃瓜创作者激励计划第二季开启报名</span>
+      <span>专题企划《围观之后》新增 3 支原创短片，持续更新中</span>
+    </div>
+  </div>
+  <header class="xk-header">
+    <div class="xk-header-inner">
+      <a class="xk-logo" href="#xk-top">
+        <span class="xk-logo-mark">喵</span>
+        <span>小野猫kiki吃瓜<small>XIAOYEMAO KIKI</small></span>
+      </a>
+      <nav class="xk-nav" id="xkNav">
+        <a href="#xk-top">首页</a>
+        <a href="#xk-about">品牌解析</a>
+        <a href="#xk-focus">焦点内容</a>
+        <a href="#xk-flow">热门视频</a>
+        <a href="#xk-topics">专题企划</a>
+        <a href="#xk-creators">创作者</a>
+        <a href="#xk-news">企业动态</a>
+        <a href="#xk-faq">帮助</a>
+      </nav>
+      <div class="xk-header-tools">
+        <div class="xk-search">
+          <input id="xkSearchInput" type="text" placeholder="搜索吃瓜话题 / 创作者" aria-label="站内搜索">
+          <button class="xk-search-btn" id="xkSearchBtn" aria-label="搜索">⌕</button>
+          <div class="xk-search-tip" id="xkSearchTip"></div>
+        </div>
+        <button class="xk-burger" id="xkBurger" aria-label="展开导航">☰</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="xk-top">
+
+  <!-- 首屏 -->
+  <section class="xk-hero">
+    <div class="xk-hero-grid">
+      <div>
+        <div class="xk-hero-badge"><b>官方网站</b> 小野猫kiki吃瓜品牌视频门户 · 持续运营中</div>
+        <h1>小野猫kiki<span>吃瓜</span></h1>
+        <p class="xk-hero-lead">
+          一家以「围观」为方法的原创视频品牌。我们相信每一次吃瓜背后都藏着时代的情绪与人的故事，
+          用高清影像把零散的讨论整理成值得回看的精品内容，让围观也可以有温度、有分寸、有力量。
+        </p>
+        <div class="xk-hero-actions">
+          <a class="xk-btn xk-btn-primary" href="#xk-focus">进入内容中心 →</a>
+          <a class="xk-btn xk-btn-ghost" href="#xk-join">创作者投稿</a>
+        </div>
+        <div class="xk-hero-stats">
+          <div class="xk-stat"><b>1,860+</b><span>原创视频作品</span></div>
+          <div class="xk-stat"><b>96.4 万</b><span>社区注册用户</span></div>
+          <div class="xk-stat"><b>32 位</b><span>签约创作者</span></div>
+        </div>
+      </div>
+      <div class="xk-hero-visual">
+        <div class="xk-hero-frame">
+          <svg viewBox="0 0 640 400" role="img" aria-label="小野猫kiki吃瓜品牌主视觉：夜晚阳台上的围观场景插画">
+            <defs>
+              <linearGradient id="xkSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a2b3f"/>
+                <stop offset="1" stop-color="#8a5a3c"/>
+              </linearGradient>
+              <linearGradient id="xkSun" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffd27a"/>
+                <stop offset="1" stop-color="#f6a623"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="400" fill="url(#xkSky)"/>
+            <circle cx="500" cy="118" r="64" fill="url(#xkSun)" opacity=".92"/>
+            <circle cx="500" cy="118" r="86" fill="#f6a623" opacity=".18"/>
+            <g fill="#2b2118" opacity=".85">
+              <rect x="0" y="268" width="120" height="132"/>
+              <rect x="130" y="228" width="78" height="172"/>
+              <rect x="218" y="300" width="96" height="100"/>
+              <rect x="326" y="248" width="70" height="152"/>
+              <rect x="406" y="292" width="110" height="108"/>
+              <rect x="528" y="256" width="112" height="144"/>
+            </g>
+            <g fill="#ffd27a" opacity=".8">
+              <rect x="18" y="288" width="10" height="12"/><rect x="42" y="288" width="10" height="12"/>
+              <rect x="66" y="288" width="10" height="12"/><rect x="18" y="316" width="10" height="12"/>
+              <rect x="148" y="252" width="10" height="12"/><rect x="172" y="252" width="10" height="12"/>
+              <rect x="148" y="280" width="10" height="12"/><rect x="236" y="324" width="10" height="12"/>
+              <rect x="262" y="324" width="10" height="12"/><rect x="432" y="316" width="10" height="12"/>
+              <rect x="462" y="316" width="10" height="12"/><rect x="548" y="280" width="10" height="12"/>
+              <rect x="578" y="280" width="10" height="12"/><rect x="548" y="310" width="10" height="12"/>
+            </g>
+            <!-- 阳台栏杆 -->
+            <rect x="0" y="330" width="640" height="10" fill="#1f1810"/>
+            <rect x="0" y="360" width="640" height="40" fill="#241b12"/>
+            <!-- 猫剪影 -->
+            <g fill="#15100b">
+              <path d="M170 330 C170 296 196 282 214 282 C222 262 234 254 240 258 C246 250 258 250 262 258 C274 262 280 276 282 288 C302 296 318 310 318 330 Z"/>
+              <path d="M228 262 L222 242 L236 254 Z"/>
+              <path d="M254 254 L268 242 L264 262 Z"/>
+            </g>
+            <circle cx="232" cy="292" r="4" fill="#f6a623"/>
+            <circle cx="262" cy="292" r="4" fill="#f6a623"/>
+            <!-- 西瓜 -->
+            <g transform="translate(340,296)">
+              <path d="M0 30 A40 40 0 0 1 80 30 Z" fill="#3f9e6e"/>
+              <path d="M6 30 A34 34 0 0 1 74 30 Z" fill="#e0627a"/>
+              <circle cx="26" cy="22" r="2.6" fill="#2b2118"/>
+              <circle cx="42" cy="17" r="2.6" fill="#2b2118"/>
+              <circle cx="58" cy="22" r="2.6" fill="#2b2118"/>
+            </g>
+          </svg>
+        </div>
+        <div class="xk-hero-float f1"><span class="xk-dot"></span>本期新增 6 支原创新片</div>
+        <div class="xk-hero-float f2"><span class="xk-dot"></span>吃瓜观察室 · 每周三更新</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词解析 -->
+  <section class="xk-section xk-about" id="xk-about">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Brand Insight</span>
+          <h2>关于「小野猫kiki吃瓜」这个<em>品牌</em></h2>
+        </div>
+        <p>从一句网络口头禅，到一个认真做内容的视频品牌，我们用了三年时间把「围观」变成一门值得深耕的手艺。</p>
+      </div>
+      <div class="xk-about-grid">
+        <aside class="xk-about-card">
+          <h3>品牌速览</h3>
+          <p style="font-size:13.5px;color:#5b4d3d">小野猫kiki吃瓜，定位为娱乐热点观察与大众文化记录的原创视频品牌，以「吃瓜」为叙事切口，提供有观点、有温度、有边界的围观内容。</p>
+          <ul>
+            <li>成立时间：2023 年 4 月</li>
+            <li>内容方向：热点观察 / 人物访谈 / 文化漫谈</li>
+            <li>更新节奏：每周三、周六官方发布</li>
+            <li>核心价值观：真实、分寸、陪伴</li>
+            <li>内容生态：32 位签约创作者共建</li>
+          </ul>
+        </aside>
+        <div class="xk-prose">
+          <p>
+            「小野猫kiki吃瓜」这个名字，最早来自品牌创始人 kiki 在社区里的一句自我介绍。她说自己像一只蹲在墙头的小野猫，
+            不吵不闹，只是安静地看着街上来来往往的人和事。后来这句话被朋友们反复引用，慢慢变成了一个固定的称呼，
+            也变成了今天这个视频品牌的名字。作为<strong>官方网站</strong>对外呈现的品牌门户，我们希望把这种「安静围观」的姿态，
+            做成一种更成熟的内容方法：不猎奇、不添油加醋，只把事情的来龙去脉摆清楚，把每个人的处境讲明白。
+          </p>
+          <p>
+            从内容属性上看，小野猫kiki吃瓜属于典型的<strong>娱乐热点观察类视频品牌</strong>。它与传统八卦资讯的区别在于，
+            我们不追逐单点的爆裂信息，而是关心一个话题为什么会在此时被讨论、被谁讨论、讨论到最后留下了什么。
+            一支十分钟左右的原创短片，背后往往需要三到五天的资料梳理、多方求证与剪辑打磨。这样的节奏不快，
+            但足以让内容具备二次传播的价值，也让品牌在垂直领域里积累起相对稳固的口碑。
+          </p>
+          <h3>为什么是「吃瓜」这两个字</h3>
+          <p>
+            「吃瓜」在中文互联网语境里，天然带着一种轻松、戏谑、参与感极强的气质。它降低了围观的门槛，
+            让每一个普通人都有资格对公共话题发表看法。但轻松不等于轻浮。小野猫kiki吃瓜在做的事情，
+            恰恰是把这种轻飘飘的表达，重新赋予重量：我们会在视频里保留不同的声音，会把当事人的完整表述放出来，
+            会明确标注哪些信息仍然存疑。我们相信，一个愿意认真对待围观过程的平台，才有可能真正赢得用户的信任。
+          </p>
+          <h3>内容生态与创作方法</h3>
+          <p>
+            目前，小野猫kiki吃瓜的内容生态由三条主线构成。第一条是《吃瓜观察室》，以周更节奏复盘当周热点，
+            拆解舆论场的情绪走向，是这个品牌最具代表性的栏目；第二条是《围观之后》，聚焦热点散去之后的当事人，
+            用人物访谈的方式记录他们的真实生活；第三条是《街角耳语》，以十分钟以内的轻量短片，
+            记录城市里那些正在发生的小型文化现象。三条主线互相支撑，让品牌既能保持热度，也能沉淀厚度。
+          </p>
+          <p>
+            在创作方法上，我们坚持「三不」原则：不编造、不诱导、不消费。所有引用素材都标注来源，
+            所有推断都使用「可能」「或许」这类限定表达，所有涉及普通人的画面都经过授权或模糊处理。
+            这些看似繁琐的流程，正是<strong>专业</strong>内容与随手八卦之间最本质的差别。我们希望小野猫kiki吃瓜这四个字，
+            在用户心里能对应上一种稳定可靠的内容体验。
+          </p>
+          <h3>面向未来：让围观成为陪伴</h3>
+          <p>
+            2026 年，我们正式把「陪伴」写进品牌关键词。围观不应该是短暂的兴奋，而可以是一种长期的陪伴——
+            你在通勤路上刷到一支短片，在评论区看到和自己一样困惑的人，在下一个周三的更新里找到答案的延续。
+            为了做到这一点，小野猫kiki吃瓜将持续投入原创内容、持续开放创作者合作、持续打磨社区氛围。
+            我们相信，一个品牌的<strong>影响力</strong>，最终来自它是否真的理解了自己所服务的那群人。
+          </p>
+          <p>
+            如果你也是那种「吃瓜之后还想再多想一步」的人，欢迎留下来。这里没有喧哗的标题，只有认真整理过的内容；
+            没有站队的口号，只有尽量完整的事实。小野猫kiki吃瓜，愿做你身边那只安静的猫，陪你看完这场热闹，也陪你想想热闹之后的事。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="xk-section xk-focus" id="xk-focus">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Focus</span>
+          <h2>本期焦点<em>内容</em></h2>
+        </div>
+        <p>编辑部本周精选，从热点复盘到人物深访，把一场围观讲完整。</p>
+      </div>
+      <div class="xk-focus-grid">
+        <article class="xk-vcard">
+          <div class="xk-vthumb">
+            <svg viewBox="0 0 640 360" role="img" aria-label="吃瓜观察室第118期封面：演播室灯光下的讨论桌">
+              <defs>
+                <linearGradient id="f1bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#3a2b3f"/><stop offset="1" stop-color="#7b4a34"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#f1bg)"/>
+              <circle cx="320" cy="120" r="150" fill="#f6a623" opacity=".16"/>
+              <rect x="90" y="228" width="460" height="22" rx="11" fill="#f6a623" opacity=".85"/>
+              <rect x="140" y="250" width="20" height="70" fill="#2b2118"/>
+              <rect x="480" y="250" width="20" height="70" fill="#2b2118"/>
+              <g fill="#ffe9c6" opacity=".9">
+                <circle cx="200" cy="196" r="26"/><rect x="178" y="222" width="44" height="26" rx="10"/>
+                <circle cx="440" cy="196" r="26"/><rect x="418" y="222" width="44" height="26" rx="10"/>
+              </g>
+              <rect x="278" y="150" width="84" height="78" rx="10" fill="#e0627a"/>
+              <text x="320" y="200" text-anchor="middle" font-size="34" fill="#fff" font-weight="900">118</text>
+            </svg>
+            <span class="xk-vtag">深度复盘</span>
+            <span class="xk-vplay">▶</span>
+          </div>
+          <div class="xk-vbody">
+            <h3>吃瓜观察室 118 期：2026 年度网络热梗，为什么我们记住了这些瞬间</h3>
+            <p>从年初的「班味退散」到年底的「情绪搭子」，一年 52 周的热梗背后，藏着普通人共同的情绪曲线。本期用 24 分钟，把这一年的围观记忆重新排了一次序。</p>
+            <div class="xk-vmeta">
+              <div class="xk-vchips"><span class="xk-chip">热点复盘</span><span class="xk-chip">文化观察</span></div>
+              <span>12.8 万次播放 · 3 天前</span>
+            </div>
+            <div class="xk-vactions">
+              <button class="xk-act xk-like" data-count="3241">♡ <b>3,241</b></button>
+              <button class="xk-act xk-save">☆ 收藏</button>
+              <button class="xk-act xk-share">↗ 分享</button>
+            </div>
+          </div>
+        </article>
+        <div class="xk-focus-side">
+          <article class="xk-vcard">
+            <div class="xk-vthumb">
+              <svg viewBox="0 0 400 250" role="img" aria-label="围观之后专访封面：午后窗边的访谈场景">
+                <rect width="400" height="250" fill="#f4e3cf"/>
+                <rect x="0" y="180" width="400" height="70" fill="#e0c19c"/>
+                <rect x="46" y="40" width="110" height="130" rx="8" fill="#8fbfc9"/>
+                <rect x="52" y="46" width="98" height="118" fill="#cfe7ec"/>
+                <circle cx="280" cy="112" r="34" fill="#2b2118"/>
+                <rect x="252" y="146" width="56" height="36" rx="12" fill="#e0627a"/>
+                <circle cx="160" cy="130" r="26" fill="#f0b98a"/>
+                <rect x="136" y="156" width="48" height="26" rx="10" fill="#3f9e6e"/>
+              </svg>
+              <span class="xk-vtag">人物访谈</span>
+              <span class="xk-vplay">▶</span>
+            </div>
+            <div class="xk-vbody">
+              <h3>围观之后：热度退去，他重新开了一家小面馆</h3>
+              <p>去年被推上热搜的素人老板，如今怎样了？</p>
+            </div>
+          </article>
+          <article class="xk-vcard">
+            <div class="xk-vthumb">
+              <svg viewBox="0 0 400 250" role="img" aria-label="街角耳语短片封面：夜晚霓虹招牌的街巷">
+                <rect width="400" height="250" fill="#241b12"/>
+                <rect x="0" y="170" width="400" height="80" fill="#171009"/>
+                <rect x="40" y="60" width="80" height="110" rx="6" fill="#3a2b3f"/>
+                <rect x="58" y="80" width="44" height="14" rx="7" fill="#f6a623"/>
+                <rect x="58" y="106" width="44" height="14" rx="7" fill="#e0627a"/>
+                <rect x="150" y="90" width="70" height="80" rx="6" fill="#4a3628"/>
+                <rect x="166" y="108" width="38" height="12" rx="6" fill="#3f9e6e"/>
+                <rect x="250" y="70" width="110" height="100" rx="8" fill="#54392a"/>
+                <rect x="266" y="92" width="78" height="16" rx="8" fill="#f6a623"/>
+                <rect x="266" y="120" width="52" height="16" rx="8" fill="#ffe9c6"/>
+              </svg>
+              <span class="xk-vtag">城市探索</span>
+              <span class="xk-vplay">▶</span>
+            </div>
+            <div class="xk-vbody">
+              <h3>街角耳语：凌晨两点还亮着灯的小店，都在聊什么</h3>
+              <p>三座城市，六个深夜，一段关于围观与被围观的记录。</p>
+            </div>
+          </article>
+          <article class="xk-vcard">
+            <div class="xk-vthumb">
+              <svg viewBox="0 0 400 250" role="img" aria-label="吃瓜冷知识封面：西瓜切片与放大镜插画">
+                <rect width="400" height="250" fill="#eaf6ee"/>
+                <circle cx="200" cy="126" r="86" fill="#fff"/>
+                <path d="M140 140 A60 60 0 0 1 260 140 Z" fill="#3f9e6e"/>
+                <path d="M150 140 A50 50 0 0 1 250 140 Z" fill="#e0627a"/>
+                <circle cx="180" cy="126" r="3" fill="#2b2118"/>
+                <circle cx="200" cy="118" r="3" fill="#2b2118"/>
+                <circle cx="220" cy="126" r="3" fill="#2b2118"/>
+                <circle cx="292" cy="72" r="16" fill="none" stroke="#f6a623" stroke-width="6"/>
+                <rect x="304" y="84" width="8" height="26" rx="4" fill="#f6a623" transform="rotate(-45 308 97)"/>
+              </svg>
+              <span class="xk-vtag">知识科普</span>
+              <span class="xk-vplay">▶</span>
+            </div>
+            <div class="xk-vbody">
+              <h3>吃瓜冷知识：一条热搜，从出现到消失要经过几步</h3>
+              <p>把传播链路拆开看，很多焦虑其实可以被理解。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="xk-section xk-flow" id="xk-flow">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Trending</span>
+          <h2>热门视频<em>流</em></h2>
+        </div>
+        <p>本周社区讨论度最高的原创内容，覆盖热点、访谈、生活与幕后。</p>
+      </div>
+      <div class="xk-flow-grid">
+
+        <article class="xk-vcard">
+          <div class="xk-vthumb">
+            <svg viewBox="0 0 400 225" role="img" aria-label="吃瓜观察室剪辑幕后封面：剪辑软件时间线插画">
+              <rect width="400" height="225" fill="#2f3a45"/>
+              <rect x="24" y="30" width="352" height="120" rx="8" fill="#1d252c"/>
+              <g fill="#3f9e6e"><rect x="40" y="52" width="90" height="16" rx="4"/><rect x="140" y="76" width="130" height="16" rx="4"/></g>
+              <g fill="#f6a623"><rect x="40" y="98" width="150" height="16" rx="4"/><rect x="200" y="120" width="90" height="16" rx="4"/></g>
+              <rect x="24" y="160" width="352" height="40" rx="8" fill="#3a4854"/>
+              <rect x="120" y="170" width="8" height="20" fill="#e0627a"/>
+            </svg>
+            <span class="xk-vtag">创作幕后</span>
+            <span class="xk-vplay">▶</span>
+          </div>
+          <div class="xk-vbody">
+            <h3>一支 12 分钟的吃瓜视频，是怎么被剪出来的</h3>
+            <p>素材 6 小时，成片 12 分钟。剪辑师阿檀带你走一遍时间线，看看哪一刀最难下。</p>
+            <div class="xk-vmeta"><div class="xk-vchips"><span class="xk-chip">幕后</span><span class="xk-chip">剪辑思路</span></div><span>4.6 万播放</span></div>
+            <div class="xk-vactions">
+              <button class="xk-act xk-like" data-count="1128">♡ <b>1,128</b></button>
+              <button class="xk-act xk-save">☆ 收藏</button>
+              <button class="xk-act xk-share">↗ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xk-vcard">
+          <div class="xk-vthumb">
+            <svg viewBox="0 0 400 225" role="img" aria-label="评论区人间观察封面：对话气泡组成的网格">
+              <rect width="400" height="225" fill="#fff3e3"/>
+              <g fill="#f6a623"><rect x="30" y="30" width="150" height="44" rx="18"/><path d="M52 74 L44 92 L70 74Z"/></g>
+              <g fill="#3f9e6e"><rect x="210" y="46" width="160" height="44" rx="18"/><path d="M230 90 L222 108 L248 90Z"/></g>
+              <g fill="#e0627a"><rect x="60" y="118" width="170" height="44" rx="18"/><path d="M84 162 L76 180 L102 162Z"/></g>
+              <g fill="#8fbfc9"><rect x="240" y="132" width="130" height="44" rx="18"/><path d="M258 176 L250 194 L276 176Z"/></g>
+            </svg>
+            <span class="xk-vtag">社群观察</span>
+            <span class="xk-vplay">▶</span>
+          </div>
+          <div class="xk-vbody">
+            <h3>评论区人间观察：为什么大家吵着吵着就笑了</h3>
+            <p>我们爬了三条热门视频下的一万条评论，发现最打动人的往往不是观点，而是语气。</p>
+            <div class="xk-vmeta"><div class="xk-vchips"><span class="xk-chip">社区</span><span class="xk-chip">情绪</span></div><span>3.9 万播放</span></div>
+            <div class="xk-vactions">
+              <button class="xk-act xk-like" data-count="986">♡ <b>986</b></button>
+              <button class="xk-act xk-save">☆ 收藏</button>
+              <button class="xk-act xk-share">↗ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xk-vcard">
+          <div class="xk-vthumb">
+            <svg viewBox="0 0 400 225" role="img" aria-label="城市菜市场早市记录封面：摊位与人群色块">
+              <rect width="400" height="225" fill="#f0e3cf"/>
+              <rect x="0" y="150" width="400" height="75" fill="#cdb391"/>
+              <rect x="26" y="70" width="90" height="80" fill="#e0627a"/>
+              <rect x="126" y="56" width="80" height="94" fill="#3f9e6e"/>
+              <rect x="216" y="76" width="70" height="74" fill="#f6a623"/>
+              <rect x="296" y="62" width="80" height="88" fill="#8fbfc9"/>
+              <g fill="#2b2118"><circle cx="70" cy="168" r="12"/><circle cx="150" cy="174" r="14"/><circle cx="250" cy="166" r="11"/><circle cx="330" cy="172" r="13"/></g>
+            </svg>
+            <span class="xk-vtag">城市探索</span>
+            <span class="xk-vplay">▶</span>
+          </div>
+          <div class="xk-vbody">
+            <h3>六点半的菜市场，藏着这座城市最热闹的吃瓜现场</h3>
+            <p>谁家孩子回来了、哪家铺子要转手，摊主们的消息永远比热搜快一步。</p>
+            <div class="xk-vmeta"><div class="xk-vchips"><span class="xk-chip">日常记录</span><span class="xk-chip">在地文化</span></div><span>5.2 万播放</span></div>
+            <div class="xk-vactions">
+              <button class="xk-act xk-like" data-count="1537">♡ <b>1,537</b></button>
+              <button class="xk-act xk-save">☆ 收藏</button>
+              <button class="xk-act xk-share">↗ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xk-vcard">
+          <div class="xk-vthumb">
+            <svg viewBox="0 0 400 225" role="img" aria-label="素人访谈桌上问题卡片封面：桌面与卡片布局">
+              <rect width="400" height="225" fill="#e8e2d6"/>
+              <rect x="0" y="160" width="400" height="65" fill="#c9bfae"/>
+              <g fill="#fff" stroke="#d8ccb8"><rect x="40" y="60" width="110" height="76" rx="6"/><rect x="170" y="40" width="110" height="76" rx="6"/><rect x="256" y="96" width="110" height="76" rx="6"/></g>
+              <g fill="#2b2118" opacity=".55"><rect x="56" y="78" width="70" height="7" rx="3"/><rect x="56" y="94" width="52" height="7" rx="3"/><rect x="186" y="58" width="70" height="7" rx="3"/><rect x="186" y="74" width="44" height="7" rx="3"/><rect x="272" y="114" width="70" height="7" rx="3"/><rect x="272" y="130" width="56" height="7" rx="3"/></g>
+            </svg>
+            <span class="xk-vtag">人物访谈</span>
+            <span class="xk-vplay">▶</span>
+          </div>
+          <div class="xk-vbody">
+            <h3>把网上骂我的话打印出来，我们坐下来聊了聊</h3>
+            <p>一位被误传的素人，和三位曾经转发过假消息的网友，坐在了同一张桌子前。</p>
+            <div class="xk-vmeta"><div class="xk-vchips"><span class="xk-chip">访谈</span><span class="xk-chip">真实</span></div><span>7.1 万播放</span></div>
+            <div class="xk-vactions">
+              <button class="xk-act xk-like" data-count="2184">♡ <b>2,184</b></button>
+              <button class="xk-act xk-save">☆ 收藏</button>
+              <button class="xk-act xk-share">↗ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xk-vcard">
+          <div class="xk-vthumb">
+            <svg viewBox="0 0 400 225" role="img" aria-label="自媒体识谣小技巧封面：放大镜与真假印章">
+              <rect width="400" height="225" fill="#fdf0e0"/>
+              <circle cx="150" cy="112" r="66" fill="#fff" stroke="#f6a623" stroke-width="8"/>
+              <path d="M196 158 L246 208" stroke="#f6a623" stroke-width="14" stroke-linecap="round"/>
+              <circle cx="150" cy="112" r="30" fill="#e0627a" opacity=".8"/>
+              <g transform="translate(276,60) rotate(12)"><rect width="86" height="40" rx="8" fill="#3f9e6e"/><text x="43" y="27" text-anchor="middle" font-size="20" fill="#fff" font-weight="900">真</text></g>
+              <g transform="translate(276,118) rotate(-8)"><rect width="86" height="40" rx="8" fill="#2b2118"/><text x="43" y="27" text-anchor="middle" font-size="20" fill="#ffe9c6" font-weight="900">假</text></g>
+            </svg>
+            <span class="xk-vtag">实用技巧</span>
+            <span class="xk-vplay">▶</span>
+          </div>
+          <div class="xk-vbody">
+            <h3>吃瓜前先看这四点：一份普通人的信息核对清单</h3>
+            <p>不用成为专家，只要养成四个小习惯，就能避开大部分被带节奏的时刻。</p>
+            <div class="xk-vmeta"><div class="xk-vchips"><span class="xk-chip">攻略</span><span class="xk-chip">科普</span></div><span>9.4 万播放</span></div>
+            <div class="xk-vactions">
+              <button class="xk-act xk-like" data-count="3562">♡ <b>3,562</b></button>
+              <button class="xk-act xk-save">☆ 收藏</button>
+              <button class="xk-act xk-share">↗ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xk-vcard">
+          <div class="xk-vthumb">
+            <svg viewBox="0 0 400 225" role="img" aria-label="深夜电台直播记录封面：耳机与声波">
+              <rect width="400" height="225" fill="#2a2233"/>
+              <circle cx="130" cy="112" r="46" fill="none" stroke="#f6a623" stroke-width="10"/>
+              <circle cx="130" cy="112" r="18" fill="#f6a623"/>
+              <rect x="112" y="158" width="36" height="34" rx="14" fill="#f6a623"/>
+              <g stroke="#e0627a" stroke-width="5" stroke-linecap="round">
+                <line x1="220" y1="80" x2="220" y2="144"/>
+                <line x1="244" y1="60" x2="244" y2="164"/>
+                <line x1="268" y1="88" x2="268" y2="136"/>
+                <line x1="292" y1="70" x2="292" y2="154"/>
+                <line x1="316" y1="96" x2="316" y2="128"/>
+              </g>
+            </svg>
+            <span class="xk-vtag">治愈影像</span>
+            <span class="xk-vplay">▶</span>
+          </div>
+          <div class="xk-vbody">
+            <h3>深夜电台：那些没人围观的心事，也可以被听见</h3>
+            <p>我们把听众投稿的语音做成了一支短片，没有反转，也没有热搜，只有很轻的呼吸声。</p>
+            <div class="xk-vmeta"><div class="xk-vchips"><span class="xk-chip">情感故事</span><span class="xk-chip">陪伴</span></div><span>6.3 万播放</span></div>
+            <div class="xk-vactions">
+              <button class="xk-act xk-like" data-count="2710">♡ <b>2,710</b></button>
+              <button class="xk-act xk-save">☆ 收藏</button>
+              <button class="xk-act xk-share">↗ 分享</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="xk-section xk-topics" id="xk-topics">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Series</span>
+          <h2>专题<em>企划</em></h2>
+        </div>
+        <p>长期更新的系列内容，用更完整的结构，讲清楚一件事的来龙去脉。</p>
+      </div>
+      <div class="xk-topic-list">
+
+        <article class="xk-topic">
+          <div class="xk-topic-cover">
+            <svg viewBox="0 0 200 125" role="img" aria-label="围观之后专题封面：空椅子与灯光">
+              <rect width="200" height="125" fill="#f4e3cf"/>
+              <circle cx="100" cy="34" r="26" fill="#f6a623" opacity=".7"/>
+              <rect x="52" y="70" width="96" height="14" rx="7" fill="#8a5a3c"/>
+              <rect x="60" y="84" width="10" height="34" fill="#6b4429"/>
+              <rect x="130" y="84" width="10" height="34" fill="#6b4429"/>
+              <rect x="52" y="52" width="96" height="18" rx="9" fill="#c09468"/>
+            </svg>
+          </div>
+          <div>
+            <h3>《围观之后》—— 热点散去，生活继续</h3>
+            <p>聚焦曾经被推上风口浪尖的普通当事人，记录他们在喧嚣退去后的真实选择。已更新 9 集，每集 15 分钟。</p>
+          </div>
+          <span class="xk-topic-status">更新中</span>
+        </article>
+
+        <article class="xk-topic">
+          <div class="xk-topic-cover">
+            <svg viewBox="0 0 200 125" role="img" aria-label="年度热梗复盘专题封面：时间轴与节点">
+              <rect width="200" height="125" fill="#e8f1ec"/>
+              <line x1="20" y1="62" x2="180" y2="62" stroke="#3f9e6e" stroke-width="4" stroke-linecap="round"/>
+              <g fill="#f6a623"><circle cx="42" cy="62" r="9"/><circle cx="88" cy="62" r="9"/><circle cx="134" cy="62" r="9"/><circle cx="172" cy="62" r="9"/></g>
+              <g fill="#2b2118" opacity=".5"><rect x="34" y="84" width="16" height="16" rx="4"/><rect x="80" y="84" width="16" height="16" rx="4"/><rect x="126" y="84" width="16" height="16" rx="4"/><rect x="164" y="84" width="16" height="16" rx="4"/></g>
+            </svg>
+          </div>
+          <div>
+            <h3>《一年热梗图鉴》—— 2026 年度文化切片</h3>
+            <p>按季度梳理全年网络热词与现象级事件，邀请文化研究者、普通用户共同复盘，形成可回看的年度档案。</p>
+          </div>
+          <span class="xk-topic-status hot">已完结</span>
+        </article>
+
+        <article class="xk-topic">
+          <div class="xk-topic-cover">
+            <svg viewBox="0 0 200 125" role="img" aria-label="城市耳语专题封面：街巷与霓虹">
+              <rect width="200" height="125" fill="#2a2233"/>
+              <rect x="18" y="54" width="46" height="71" fill="#3f2f4a"/>
+              <rect x="74" y="36" width="52" height="89" fill="#4a3628"/>
+              <rect x="136" y="64" width="46" height="61" fill="#3f2f4a"/>
+              <g fill="#f6a623"><rect x="28" y="66" width="26" height="8" rx="4"/><rect x="86" y="52" width="28" height="8" rx="4"/><rect x="146" y="78" width="26" height="8" rx="4"/></g>
+              <g fill="#e0627a"><rect x="28" y="86" width="18" height="8" rx="4"/><rect x="146" y="98" width="18" height="8" rx="4"/></g>
+            </svg>
+          </div>
+          <div>
+            <h3>《街角耳语》—— 城市里的小型文化现场</h3>
+            <p>每集探访一个城市角落：深夜排档、旧书店、社区球场。记录正在发生的、还没被大量围观的日常文化。</p>
+          </div>
+          <span class="xk-topic-status">更新中</span>
+        </article>
+
+        <article class="xk-topic">
+          <div class="xk-topic-cover">
+            <svg viewBox="0 0 200 125" role="img" aria-label="创作者成长营专题封面：阶梯与上升箭头">
+              <rect width="200" height="125" fill="#fdf0e0"/>
+              <g fill="#f6a623"><rect x="30" y="88" width="30" height="24" rx="4"/><rect x="66" y="70" width="30" height="42" rx="4"/><rect x="102" y="50" width="30" height="62" rx="4"/><rect x="138" y="30" width="30" height="82" rx="4"/></g>
+              <circle cx="156" cy="22" r="10" fill="#e0627a"/>
+            </svg>
+          </div>
+          <div>
+            <h3>《创作者成长营》—— 从围观者到表达者</h3>
+            <p>面向新加入的创作者，提供选题、脚本、拍摄、剪辑四个阶段的公开课与实战挑战，优秀作品将获得官方推荐。</p>
+          </div>
+          <span class="xk-topic-status hot">报名中</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="xk-section xk-creators" id="xk-creators">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Creators</span>
+          <h2>创作者<em>矩阵</em></h2>
+        </div>
+        <p>他们用各自的视角，把「吃瓜」这件事讲出了不同的层次。</p>
+      </div>
+      <div class="xk-creator-grid" id="xkCreatorGrid">
+
+        <article class="xk-creator" data-name="kiki本人" data-field="热点观察 · 品牌主理人" data-desc="小野猫kiki吃瓜品牌主理人，擅长把复杂舆论场拆成普通人听得懂的语言。主持《吃瓜观察室》全部 118 期。">
+          <div class="xk-avatar" style="background:linear-gradient(135deg,#f6a623,#e07b1f)">k</div>
+          <h3>kiki本人</h3>
+          <div class="xk-field">热点观察 · 品牌主理人</div>
+          <p>把复杂的舆论场，讲成普通人听得懂的话。</p>
+          <div class="xk-cdata"><div><b>118</b>作品</div><div><b>28.6万</b>粉丝</div></div>
+        </article>
+
+        <article class="xk-creator" data-name="阿檀剪辑室" data-field="创作幕后 · 剪辑师" data-desc="负责品牌内容后期流程，擅长用节奏与留白控制情绪。开设《幕后时间线》系列，累计播放超过 80 万。">
+          <div class="xk-avatar" style="background:linear-gradient(135deg,#3f9e6e,#2f7a53)">檀</div>
+          <h3>阿檀剪辑室</h3>
+          <div class="xk-field">创作幕后 · 剪辑师</div>
+          <p>好的剪辑不是加法，是知道哪一刀可以不下。</p>
+          <div class="xk-cdata"><div><b>64</b>作品</div><div><b>11.2万</b>粉丝</div></div>
+        </article>
+
+        <article class="xk-creator" data-name="街角记录员" data-field="城市探索 · 影像记录" data-desc="常年带着相机在城市里晃，偏爱菜市场、旧街区与深夜小店。相信最真实的吃瓜现场，往往不在热搜里。">
+          <div class="xk-avatar" style="background:linear-gradient(135deg,#8fbfc9,#4f8f9e)">街</div>
+          <h3>街角记录员</h3>
+          <div class="xk-field">城市探索 · 影像记录</div>
+          <p>最真实的吃瓜现场，往往不在热搜里。</p>
+          <div class="xk-cdata"><div><b>87</b>作品</div><div><b>9.8万</b>粉丝</div></div>
+        </article>
+
+        <article class="xk-creator" data-name="小满访谈" data-field="人物访谈 · 内容策划" data-desc="负责《围观之后》系列的人物沟通与脚本，擅长在沉默里找到问题。采访过 40 多位普通当事人。">
+          <div class="xk-avatar" style="background:linear-gradient(135deg,#e0627a,#b8435a)">满</div>
+          <h3>小满访谈</h3>
+          <div class="xk-field">人物访谈 · 内容策划</div>
+          <p>好问题不在稿子上，在对方停顿的地方。</p>
+          <div class="xk-cdata"><div><b>52</b>作品</div><div><b>7.4万</b>粉丝</div></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事随笔 -->
+  <section class="xk-section xk-stories">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Notes</span>
+          <h2>编辑部<em>随笔</em></h2>
+        </div>
+        <p>视频之外，我们也想用文字留下一些当时的思考。</p>
+      </div>
+      <div class="xk-story-grid">
+
+        <article class="xk-story">
+          <h3>我们为什么删掉了一支已完成的片子</h3>
+          <p>那支片子数据会很好，但我们发现其中一段素材的授权存在疑问。删掉它花了三分钟，重新建立信任可能要更久。</p>
+          <div class="xk-smeta"><span class="xk-savatar" style="background:#f6a623">k</span>kiki本人 · 2026/11/12</div>
+        </article>
+
+        <article class="xk-story">
+          <h3>在热搜下面，找到那个说话很小声的人</h3>
+          <p>做《围观之后》的这一年，我越来越确定：真正需要被记录的，往往不是点赞最多的那条评论。</p>
+          <div class="xk-smeta"><span class="xk-savatar" style="background:#e0627a">满</span>小满访谈 · 2026/10/28</div>
+        </article>
+
+        <article class="xk-story">
+          <h3>一个剪辑师的自我修养：克制</h3>
+          <p>刚入行时总想把每一秒都填满，后来才明白，留白是给观众思考的位置。这大概也是吃瓜应有的分寸。</p>
+          <div class="xk-smeta"><span class="xk-savatar" style="background:#3f9e6e">檀</span>阿檀剪辑室 · 2026/10/15</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品墙 -->
+  <section class="xk-section xk-wall">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow" style="color:#f6a623">Gallery</span>
+          <h2>社区影像<em style="color:#f6a623">墙</em></h2>
+        </div>
+        <p>由社区创作者上传的原创影像片段，每周精选一次。</p>
+      </div>
+      <div class="xk-wall-grid">
+        <div class="xk-wall-item w-l2">
+          <svg viewBox="0 0 400 220" role="img" aria-label="凌晨四点的早点铺影像封面：蒸笼热气与暖黄灯光">
+            <rect width="400" height="220" fill="#3a2b1f"/>
+            <rect x="0" y="150" width="400" height="70" fill="#241b12"/>
+            <circle cx="120" cy="70" r="30" fill="#f6a623" opacity=".55"/>
+            <g fill="#e0c19c"><rect x="60" y="112" width="70" height="40" rx="8"/><rect x="146" y="126" width="70" height="26" rx="8"/></g>
+            <g stroke="#ffe9c6" stroke-width="3" opacity=".5" fill="none"><path d="M84 100 q12 -18 0 -34"/><path d="M110 100 q12 -18 0 -34"/><path d="M170 116 q10 -14 0 -28"/></g>
+            <rect x="250" y="96" width="110" height="56" rx="6" fill="#4a3628"/>
+          </svg>
+          <span>凌晨四点的早点铺</span>
+        </div>
+        <div class="xk-wall-item w-l1">
+          <svg viewBox="0 0 200 220" role="img" aria-label="下班地铁上的耳机影像封面：车厢与耳机剪影">
+            <rect width="200" height="220" fill="#2f3a45"/>
+            <rect x="20" y="40" width="160" height="20" rx="10" fill="#4b5a68"/>
+            <circle cx="70" cy="120" r="26" fill="#8fbfc9"/>
+            <path d="M46 120 a24 24 0 0 1 48 0" stroke="#f6a623" stroke-width="7" fill="none"/>
+            <circle cx="52" cy="126" r="7" fill="#f6a623"/><circle cx="88" cy="126" r="7" fill="#f6a623"/>
+            <rect x="120" y="100" width="46" height="80" rx="8" fill="#3f4c58"/>
+          </svg>
+          <span>下班地铁上的耳机</span>
+        </div>
+        <div class="xk-wall-item w-l2r">
+          <svg viewBox="0 0 400 110" role="img" aria-label="窗台上的猫影像封面：阳光与猫躺姿">
+            <rect width="400" height="110" fill="#fdf0e0"/>
+            <rect x="0" y="76" width="400" height="34" fill="#e0c19c"/>
+            <rect x="60" y="20" width="120" height="56" rx="6" fill="#cfe7ec"/>
+            <g fill="#2b2118"><ellipse cx="260" cy="72" rx="52" ry="18"/><circle cx="306" cy="58" r="16"/><path d="M300 46 l-6 -12 l10 8Z"/><path d="M314 46 l6 -12 l-10 8Z"/></g>
+            <circle cx="306" cy="58" r="4" fill="#f6a623"/>
+          </svg>
+          <span>窗台上的猫</span>
+        </div>
+        <div class="xk-wall-item w-l1">
+          <svg viewBox="0 0 200 220" role="img" aria-label="手写留言本影像封面：翻开的笔记本">
+            <rect width="200" height="220" fill="#e8f1ec"/>
+            <rect x="30" y="50" width="140" height="120" rx="6" fill="#fff"/>
+            <line x1="100" y1="50" x2="100" y2="170" stroke="#d8ccb8"/>
+            <g stroke="#a8c4b8" stroke-width="3" stroke-linecap="round"><line x1="46" y1="76" x2="88" y2="76"/><line x1="46" y1="94" x2="82" y2="94"/><line x1="46" y1="112" x2="88" y2="112"/><line x1="112" y1="76" x2="154" y2="76"/><line x1="112" y1="94" x2="146" y2="94"/></g>
+          </svg>
+          <span>手写留言本</span>
+        </div>
+        <div class="xk-wall-item w-l1">
+          <svg viewBox="0 0 200 220" role="img" aria-label="夏日西瓜摊影像封面：成排西瓜">
+            <rect width="200" height="220" fill="#f6a623" opacity=".25"/>
+            <rect x="0" y="150" width="200" height="70" fill="#c09468"/>
+            <g fill="#3f9e6e"><circle cx="60" cy="130" r="30"/><circle cx="120" cy="140" r="26"/><circle cx="160" cy="128" r="24"/></g>
+            <g stroke="#2f7a53" stroke-width="3" fill="none"><path d="M40 120 q20 10 40 0"/><path d="M104 132 q16 8 32 0"/></g>
+          </svg>
+          <span>夏日西瓜摊</span>
+        </div>
+        <div class="xk-wall-item w-l2">
+          <svg viewBox="0 0 400 220" role="img" aria-label="旧书店午后影像封面：书架与斜射阳光">
+            <rect width="400" height="220" fill="#4a3628"/>
+            <rect x="0" y="170" width="400" height="50" fill="#3a2b1f"/>
+            <g fill="#e0627a"><rect x="30" y="40" width="14" height="120"/><rect x="52" y="56" width="14" height="104"/></g>
+            <g fill="#f6a623"><rect x="80" y="48" width="14" height="112"/><rect x="102" y="64" width="14" height="96"/></g>
+            <g fill="#8fbfc9"><rect x="140" y="36" width="14" height="124"/><rect x="162" y="58" width="14" height="102"/></g>
+            <polygon points="240,0 340,0 250,220 150,220" fill="#ffe9c6" opacity=".16"/>
+            <rect x="300" y="110" width="70" height="60" rx="6" fill="#6b4429"/>
+          </svg>
+          <span>旧书店午后</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="xk-section xk-reviews">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Voices</span>
+          <h2>社区<em>评价</em></h2>
+        </div>
+        <p>来自社区用户的真实反馈，是我们持续运营下去的理由。</p>
+      </div>
+      <div class="xk-review-grid">
+
+        <article class="xk-review">
+          <div class="xk-stars">★★★★★</div>
+          <p>看《吃瓜观察室》最舒服的一点是，它从不急着给我结论。每次都会先把各方的说法摆出来，最后才给一点克制的判断，看完心里很踏实。</p>
+          <div class="xk-ruser"><span class="xk-savatar" style="background:#f6a623">林</span><span><b>林间有风</b> · 关注 8 个月</span></div>
+        </article>
+
+        <article class="xk-review">
+          <div class="xk-stars">★★★★★</div>
+          <p>作为一个做了两年自媒体的，特别欣赏小野猫kiki吃瓜的选题节奏。不贪多，每条都做透，这一点在现在的环境里挺难得的。</p>
+          <div class="xk-ruser"><span class="xk-savatar" style="background:#3f9e6e">周</span><span><b>周更不鸽</b> · 创作者</span></div>
+        </article>
+
+        <article class="xk-review">
+          <div class="xk-stars">★★★★☆</div>
+          <p>《围观之后》那期面馆老板的采访看哭了。原来热搜背后真的都是一个个活生生的人，看完之后我对转发这件事谨慎多了。</p>
+          <div class="xk-ruser"><span class="xk-savatar" style="background:#e0627a">六</span><span><b>六月西瓜</b> · 关注 1 年</span></div>
+        </article>
+
+        <article class="xk-review">
+          <div class="xk-stars">★★★★★</div>
+          <p>投稿过一次城市短片，编辑部给了很细致的修改意见，不是那种敷衍的模板回复。后来片子播出来，数据比我预期好太多。</p>
+          <div class="xk-ruser"><span class="xk-savatar" style="background:#8fbfc9">阿</span><span><b>阿澈拍城市</b> · 社区创作者</span></div>
+        </article>
+
+        <article class="xk-review">
+          <div class="xk-stars">★★★★☆</div>
+          <p>页面设计得很舒服，找视频不费劲。唯一的小建议是希望专题能再增加一点背景资料的延伸阅读，有时候看完还想再查查。</p>
+          <div class="xk-ruser"><span class="xk-savatar" style="background:#c09468">慢</span><span><b>慢慢看</b> · 关注 5 个月</span></div>
+        </article>
+
+        <article class="xk-review">
+          <div class="xk-stars">★★★★★</div>
+          <p>同事推荐来的，本来以为就是普通的八卦号，结果一看就是一下午。最喜欢街角耳语那个系列，把城市拍得很有人情味。</p>
+          <div class="xk-ruser"><span class="xk-savatar" style="background:#f6a623">南</span><span><b>南巷咖啡</b> · 关注 3 个月</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section class="xk-section xk-news" id="xk-news">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Updates</span>
+          <h2>企业<em>动态</em></h2>
+        </div>
+        <p>官方发布的内容更新、活动报名与品牌资讯。</p>
+      </div>
+      <div class="xk-news-list">
+
+        <div class="xk-news-item">
+          <time>2026 / 11 / 16</time>
+          <h3>创作者激励计划第二季正式开放报名</h3>
+          <p>面向所有社区创作者，本季设置「最佳观察」「最佳访谈」「最佳城市记录」三个方向，报名截止 12 月 10 日，入选作品将获得官方推荐与制作支持。</p>
+        </div>
+
+        <div class="xk-news-item">
+          <time>2026 / 11 / 08</time>
+          <h3>品牌内容库升级，新增高清素材下载专区</h3>
+          <p>为方便合作创作者二次创作，官方网站内容库新增授权素材专区，包含片头、转场与背景音效，注册用户可免费下载使用。</p>
+        </div>
+
+        <div class="xk-news-item">
+          <time>2026 / 10 / 30</time>
+          <h3>《围观之后》第九集上线，累计播放突破 120 万</h3>
+          <p>本集记录了一位曾因误传而被打扰的普通店主，如何在热度退去后重新开始生活。评论区互动量创本季新高。</p>
+        </div>
+
+        <div class="xk-news-item">
+          <time>2026 / 10 / 18</time>
+          <h3>与三家城市文化机构达成内容合作</h3>
+          <p>未来将联合推出「城市记忆」系列短片，围绕老街、旧书店与社区空间展开记录，首支作品预计 12 月上线。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作伙伴 + FAQ -->
+  <section class="xk-section xk-partners" id="xk-faq">
+    <div class="xk-wrap">
+      <div class="xk-section-head">
+        <div>
+          <span class="xk-eyebrow">Partners &amp; FAQ</span>
+          <h2>合作<em>伙伴</em>与常见问题</h2>
+        </div>
+        <p>感谢一路同行的机构与创作者，也整理了一些大家最常问到的事。</p>
+      </div>
+      <div class="xk-partner-row">
+        <div class="xk-partner">城事文化馆</div>
+        <div class="xk-partner">西瓜影像社</div>
+        <div class="xk-partner">南巷咖啡</div>
+        <div class="xk-partner">旧书架计划</div>
+        <div class="xk-partner">街声录音棚</div>
+      </div>
+      <div class="xk-faq">
+        <details>
+          <summary>小野猫kiki吃瓜是一个什么样的平台？</summary>
+          <p>小野猫kiki吃瓜是一家专注娱乐热点观察与大众文化记录的原创视频品牌官网。我们以「吃瓜」为叙事切口，通过深度复盘、人物访谈与城市记录三类内容，为用户提供有观点、有分寸、有温度的精品内容。品牌坚持原创与正版，所有视频均为团队或签约创作者制作。</p>
+        </details>
+        <details>
+          <summary>我可以向平台投稿吗？需要什么条件？</summary>
+          <p>可以。任何注册用户都可以通过页面底部的投稿入口提交作品，题材不限，时长建议 3 至 20 分钟。我们更看重内容的真实性与表达的完整度，而非粉丝数量。投稿后编辑部会在 7 个工作日内给出反馈，通过的作品将进入官方发布通道。</p>
+        </details>
+        <details>
+          <summary>品牌内容的更新频率是怎样的？</summary>
+          <p>《吃瓜观察室》每周三更新，《围观之后》与《街角耳语》为双周更新，专题企划根据制作周期不定期上线。所有更新会同步在页面顶部的公告条与企业动态中提示，关注官方网站即可第一时间获取。</p>
+        </details>
+        <details>
+          <summary>视频中的素材来源如何保证合规？</summary>
+          <p>所有引用素材均经过授权或来自公开可引用渠道，涉及普通人的画面会进行授权确认或模糊处理。品牌设有内部审核流程，对存疑内容一律标注并说明依据。我们相信，对素材的严谨态度是内容品牌长期口碑的基础。</p>
+        </details>
+        <details>
+          <summary>如何与品牌进行商业合作？</summary>
+          <p>我们接受品牌联合企划、场地支持、内容共创等形式的合作。请在联系页面留下机构名称与合作方向，商务团队会在一周内回复。所有合作内容都会在视频中明确标注，保持内容的独立与透明。</p>
+        </details>
+        <details>
+          <summary>社区评论有什么规范？</summary>
+          <p>我们鼓励理性讨论，反对人身攻击、散布未经核实的信息以及任何形式的网络暴力。社区设有举报入口，收到反馈后会在 24 小时内处理。希望这里是一个可以好好说话的地方。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投稿 / 联系 -->
+  <section class="xk-join" id="xk-join">
+    <div class="xk-join-inner">
+      <div>
+        <span class="xk-eyebrow" style="color:#f6a623">Join Us</span>
+        <h2>把你的围观，变成一支作品</h2>
+        <p>无论你是拿着手机随手记录，还是已经有完整的剪辑工作流，小野猫kiki吃瓜都欢迎你的加入。这里有一群同样认真对待内容的人，也有一套成熟的发布与推荐机制。</p>
+        <div class="xk-join-actions">
+          <button class="xk-btn xk-btn-primary" id="xkSubmitBtn">立即投稿 →</button>
+          <button class="xk-btn xk-btn-ghost" id="xkContactBtn">联系编辑部</button>
+          <button class="xk-btn xk-btn-ghost" id="xkCopyBtn">复制本站链接</button>
+        </div>
+      </div>
+      <div class="xk-join-card">
+        <h3>合作与联系</h3>
+        <ul>
+          <li><span>内容投稿</span><b>tougao@xiaoyemao-kiki.cn</b></li>
+          <li><span>商务合作</span><b>biz@xiaoyemao-kiki.cn</b></li>
+          <li><span>媒体联络</span><b>press@xiaoyemao-kiki.cn</b></li>
+          <li><span>办公地址</span><b>望江路 88 号内容中心 5 层</b></li>
+          <li><span>工作时间</span><b>周一至周五 10:00-19:00</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="xk-footer">
+  <div class="xk-wrap">
+    <div class="xk-footer-grid">
+      <div>
+        <h4>小野猫kiki吃瓜</h4>
+        <p style="margin-bottom:12px">专注娱乐热点观察与大众文化记录的原创视频品牌，官方网站持续运营中，致力于为创作者与用户搭建有温度的内容生态。</p>
+        <p style="font-size:12px;color:#7d7060">真实 · 分寸 · 陪伴 · 持续成长</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#xk-focus">焦点内容</a></li>
+          <li><a href="#xk-flow">热门视频</a></li>
+          <li><a href="#xk-topics">专题企划</a></li>
+          <li><a href="#xk-creators">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#xk-about">品牌解析</a></li>
+          <li><a href="#xk-news">企业动态</a></li>
+          <li><a href="#xk-faq">常见问题</a></li>
+          <li><a href="#xk-join">合作联系</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区</h4>
+        <ul>
+          <li><a href="#xk-join">投稿指南</a></li>
+          <li><a href="#xk-creators">创作者计划</a></li>
+          <li><a href="#xk-faq">评论规范</a></li>
+          <li><a href="#xk-faq">素材授权</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="xk-footer-bottom">
+      <span>© 2023-2026 小野猫kiki吃瓜 官方网站 · 版权所有 · 原创内容受法律保护</span>
+      <span>内容审核备案号：XK-2026-0418 · 持续运营中</span>
+    </div>
+  </div>
+</footer>
+
+<button class="xk-top-btn" id="xkTopBtn" aria-label="回到顶部">↑</button>
+<div class="xk-toast" id="xkToast"></div>
+
+<!-- 通用弹窗 -->
+<div class="xk-modal-mask" id="xkModalMask">
+  <div class="xk-modal" id="xkModal">
+    <button class="xk-modal-close" id="xkModalClose" aria-label="关闭">✕</button>
+    <div id="xkModalContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端导航 */
+  var burger = document.getElementById('xkBurger');
+  var nav = document.getElementById('xkNav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      nav.classList.toggle('open');
+      burger.textContent = nav.classList.contains('open') ? '✕' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('open');
+        burger.textContent = '☰';
+      });
+    });
+  }
+
+  /* Toast */
+  var toast = document.getElementById('xkToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toast.classList.remove('show');
+    }, 2200);
+  }
+
+  /* 搜索 */
+  var searchInput = document.getElementById('xkSearchInput');
+  var searchBtn = document.getElementById('xkSearchBtn');
+  var searchTip = document.getElementById('xkSearchTip');
+  var searchIndex = ['吃瓜观察室', '围观之后', '街角耳语', '年度热梗复盘', '创作者成长营', '评论区人间观察', '信息核对清单', '深夜电台', '菜市场早市', '城市记忆'];
+  function doSearch(){
+    if(!searchInput || !searchTip) return;
+    var kw = searchInput.value.trim();
+    if(!kw){
+      searchTip.textContent = '输入话题、栏目或创作者名称试试，例如「围观之后」。';
+      searchTip.classList.add('show');
+      return;
+    }
+    var hit = searchIndex.filter(function(item){ return item.indexOf(kw) > -1; });
+    var used = searchIndex.filter(function(item){ return item.indexOf(kw) > -1; });
+    var text;
+    if(used.length && kw.length > 0){
+      text = '找到 ' + used.length + ' 条相关内容：' + used.slice(0,3).join('、') + '。点击导航进入对应栏目查看。';
+    }else{
+      text = '暂未检索到「' + kw + '」的相关内容，编辑部会记录你的需求，也可以前往「焦点内容」浏览本期精选。';
+    }
+    searchTip.textContent = text;
+    searchTip.classList.add('show');
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ doSearch(); }
+    });
+    searchInput.addEventListener('focus', function(){
+      if(searchTip) searchTip.classList.add('show');
+    });
+    document.addEventListener('click', function(e){
+      if(searchTip && !e.target.closest('.xk-search')){
+        searchTip.classList.remove('show');
+      }
+    });
+  }
+
+  /* 点赞 / 收藏 */
+  document.querySelectorAll('.xk-like').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var b = btn.querySelector('b');
+      var count = parseInt(btn.getAttribute('data-count') || '0', 10);
+      var liked = btn.classList.toggle('liked');
+      var next = liked ? count + 1 : count - 1;
+      btn.setAttribute('data-count', String(next));
+      if(b){ b.textContent = next.toLocaleString('zh-CN'); }
+      btn.firstChild.textContent = liked ? '♥ ' : '♡ ';
+      showToast(liked ? '已点赞，感谢支持' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('.xk-save').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('saved');
+      btn.textContent = saved ? '★ 已收藏' : '☆ 收藏';
+      showToast(saved ? '已加入收藏夹，可在个人中心查看' : '已取消收藏');
+    });
+  });
+  document.querySelectorAll('.xk-share').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.xk-vcard');
+      var title = card ? card.querySelector('h3').textContent : '小野猫kiki吃瓜';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(title + ' — 小野猫kiki吃瓜').then(function(){
+          showToast('标题已复制，可粘贴分享给朋友');
+        }).catch(function(){
+          showToast('分享内容：' + title);
+        });
+      }else{
+        showToast('分享内容：' + title);
+      }
+    });
+  });
+
+  /* 创作者弹窗 */
+  var mask = document.getElementById('xkModalMask');
+  var modalContent = document.getElementById('xkModalContent');
+  var modalClose = document.getElementById('xkModalClose');
+  function openModal(html){
+    if(!mask || !modalContent) return;
+    modalContent.innerHTML = html;
+    mask.classList.add('show');
+  }
+  function closeModal(){
+    if(mask) mask.classList.remove('show');
+  }
+  if(modalClose){ modalClose.addEventListener('click', closeModal); }
+  if(mask){
+    mask.addEventListener('click', function(e){
+      if(e.target === mask) closeModal();
+    });
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+
+  var creatorGrid = document.getElementById('xkCreatorGrid');
+  if(creatorGrid){
+    creatorGrid.addEventListener('click', function(e){
+      var card = e.target.closest('.xk-creator');
+      if(!card) return;
+      var name = card.getAttribute('data-name') || '';
+      var field = card.getAttribute('data-field') || '';
+      var desc = card.getAttribute('data-desc') || '';
+      openModal(
+        '<h3>' + name + '</h3>' +
+        '<p style="color:var(--xk-amber-deep);font-weight:600">' + field + '</p>' +
+        '<p>' + desc + '</p>' +
+        '<button class="xk-btn xk-btn-primary" id="xkFollowBtn">关注创作者</button>'
+      );
+      var followBtn = document.getElementById('xkFollowBtn');
+      if(followBtn){
+        followBtn.addEventListener('click', function(){
+          followBtn.textContent = '已关注 ✓';
+          followBtn.style.opacity = '.75';
+          showToast('已关注 ' + name);
+        });
+      }
+    });
+  }
+
+  /* 投稿弹窗 */
+  var submitBtn = document.getElementById('xkSubmitBtn');
+  if(submitBtn){
+    submitBtn.addEventListener('click', function(){
+      openModal(
+        '<h3>作品投稿</h3>' +
+        '<p>填写作品信息，编辑部会在 7 个工作日内反馈。也可以通过 tougao@xiaoyemao-kiki.cn 直接联系我们。</p>' +
+        '<input type="text" placeholder="作品标题 / 话题名称" aria-label="作品标题">' +
+        '<input type="text" placeholder="联系方式（邮箱或手机）" aria-label="联系方式">' +
+        '<textarea placeholder="简单介绍你的作品内容与创作想法" aria-label="作品介绍"></textarea>' +
+        '<button class="xk-btn xk-btn-primary" id="xkSubmitSend">提交投稿</button>'
+      );
+      var send = document.getElementById('xkSubmitSend');
+      if(send){
+        send.addEventListener('click', function(){
+          closeModal();
+          showToast('投稿已提交，请留意邮箱反馈');
+        });
+      }
+    });
+  }
+
+  /* 联系弹窗 */
+  var contactBtn = document.getElementById('xkContactBtn');
+  if(contactBtn){
+    contactBtn.addEventListener('click', function(){
+      openModal(
+        '<h3>联系编辑部</h3>' +
+        '<p>内容合作、素材授权、媒体采访都欢迎来信。工作时间为周一至周五 10:00-19:00。</p>' +
+        '<p><strong>投稿：</strong>tougao@xiaoyemao-kiki.cn<br>' +
+        '<strong>商务：</strong>biz@xiaoyemao-kiki.cn<br>' +
+        '<strong>媒体：</strong>press@xiaoyemao-kiki.cn</p>' +
+        '<button class="xk-btn xk-btn-ghost" id="xkContactCopy">复制投稿邮箱</button>'
+      );
+      var copyBtn = document.getElementById('xkContactCopy');
+      if(copyBtn){
+        copyBtn.addEventListener('click', function(){
+          if(navigator.clipboard && navigator.clipboard.writeText){
+            navigator.clipboard.writeText('tougao@xiaoyemao-kiki.cn').then(function(){
+              showToast('投稿邮箱已复制');
+            }).catch(function(){
+              showToast('投稿邮箱：tougao@xiaoyemao-kiki.cn');
+            });
+          }else{
+            showToast('投稿邮箱：tougao@xiaoyemao-kiki.cn');
+          }
+        });
+      }
+    });
+  }
+
+  /* 复制链接 */
+  var copyBtn = document.getElementById('xkCopyBtn');
+  if(copyBtn){
+    copyBtn.addEventListener('click', function(){
+      var linkText = '小野猫kiki吃瓜 · 原创视频内容品牌';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(linkText).then(function(){
+          showToast('品牌信息已复制，可粘贴分享');
+        }).catch(function(){
+          showToast('品牌信息：' + linkText);
+        });
+      }else{
+        showToast('品牌信息：' + linkText);
+      }
+    });
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('xkTopBtn');
+  if(topBtn){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 520){ topBtn.classList.add('show'); }
+      else{ topBtn.classList.remove('show'); }
+    }, {passive:true});
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+})();
+</script>
+</body>
+  </html>
